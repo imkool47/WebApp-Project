@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>mukul-devops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>mukul-devops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>mukul-devops-cicd</id>
+        <url>https://mukul-336444365631.d.codeartifact.ap-south-1.amazonaws.com/maven/devops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>mukul-devops-cicd</id>
+    <name>mukul-devops-cicd</name>
+    <url>https://mukul-336444365631.d.codeartifact.ap-south-1.amazonaws.com/maven/devops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
